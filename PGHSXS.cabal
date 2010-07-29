@@ -1,0 +1,30 @@
+name                          : PGHSXS
+version                       : 0.0.0
+category                      : Database
+license                       : BSD3
+license-file                  : LICENSE
+author                        : Dan Farina
+maintainer                    : drfarina@acm.org
+homepage                      : http://github.com/fdr/pghsxs
+synopsis                      : PostgeSQL extensions in Haskell.
+description                   : PostgeSQL extensions in Haskell.
+
+
+cabal-version                 : >= 1.2.3
+build-type                    : Simple
+extra-source-files            : README
+
+
+library
+  build-depends               : base >= 2 && <= 5
+                              , containers
+                              , bytestring-csv
+  exposed-modules             : Database.PGHSXS
+                                Database.PGRSXS.PGTypes.Parser
+  extensions                  : StandaloneDeriving
+                                FlexibleInstances
+                                RelaxedPolyRec
+                                ScopedTypeVariables
+                                ParallelListComp
+
+
